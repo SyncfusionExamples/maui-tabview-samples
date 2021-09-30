@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31717.71
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TabViewCustomizationSample", "TabViewCustomizationSample\TabViewCustomizationSample.csproj", "{734C1CB3-4C07-444A-8D00-9EAA86C3FE2D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{734C1CB3-4C07-444A-8D00-9EAA86C3FE2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{734C1CB3-4C07-444A-8D00-9EAA86C3FE2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{734C1CB3-4C07-444A-8D00-9EAA86C3FE2D}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{734C1CB3-4C07-444A-8D00-9EAA86C3FE2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{734C1CB3-4C07-444A-8D00-9EAA86C3FE2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{734C1CB3-4C07-444A-8D00-9EAA86C3FE2D}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C00B5557-C13D-4A2A-82D0-8CC776FF177C}
+	EndGlobalSection
+EndGlobal
