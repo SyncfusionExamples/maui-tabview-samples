@@ -54,7 +54,9 @@
             </Style>
         </Grid.Resources>
         <tabView:SfTabView x:Name="TabView" TabBarHeight="72">
-            <tabView:SfTabItem Header="Document" ImageSource="document">
+           <tabView:SfTabItem Header="Document" ImageSource="document" BadgeText="3">
+                <tabView:SfTabItem.BadgeSettings FontSize="15" FontAttributes="Bold" FontFamily="serif">
+                </tabView:SfTabItem.BadgeSettings>
                 <ListView>
                     <ListView.ItemTemplate>
                         <DataTemplate>
@@ -68,7 +70,9 @@
                     </ListView.ItemTemplate>
                 </ListView>
             </tabView:SfTabItem>
-            <tabView:SfTabItem Header="Excel" ImageSource="excel">
+              <tabView:SfTabItem Header="Excel" ImageSource="excel" BadgeText="2" >
+                    <tabView:SfTabItem.BadgeSettings FontSize="15" FontAttributes="Bold" FontFamily="serif">
+                    </tabView:SfTabItem.BadgeSettings>
                 <ListView>
                     <ListView.ItemTemplate>
                         <DataTemplate>
