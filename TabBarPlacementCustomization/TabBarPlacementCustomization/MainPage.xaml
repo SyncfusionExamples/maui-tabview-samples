@@ -1,0 +1,79 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TabBarPlacementCustomization.MainPage"
+             xmlns:tabView="clr-namespace:Syncfusion.Maui.TabView;assembly=Syncfusion.Maui.TabView"
+             BackgroundColor="{DynamicResource SecondaryColor}">
+    <Grid>
+        <Grid.Resources>
+            <Style TargetType="ListView">
+                <Setter Property="ItemsSource">
+                    <Setter.Value>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>James</x:String>
+                            <x:String>Richard</x:String>
+                            <x:String>Michael</x:String>
+                            <x:String>Alex</x:String>
+                            <x:String>Clara</x:String>
+                            <x:String>Steve</x:String>
+                            <x:String>Gabriella</x:String>
+                            <x:String>Jackson</x:String>
+                            <x:String>Liam</x:String>
+                            <x:String>Lita</x:String>
+                            <x:String>Nora</x:String>
+                            <x:String>Sebastian</x:String>
+                            <x:String>Washington</x:String>
+                        </x:Array>
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="Margin" Value="10"/>
+            </Style>
+            <Style TargetType="Label">
+                <Setter Property="VerticalOptions" Value="Center"/>
+            </Style>
+        </Grid.Resources>
+        <tabView:SfTabView x:Name="TabView" TabBarPlacement="Bottom" IndicatorPlacement="Top">
+            <tabView:SfTabItem Header="CALLS">
+                <ListView RowHeight="60">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <HorizontalStackLayout >
+                                    <Image Source="contact_image"/>
+                                    <Label Margin="10,0,0,0" TextColor="Black" Text="{Binding .}"/>
+                                </HorizontalStackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </tabView:SfTabItem>
+            <tabView:SfTabItem Header="MESSAGES">
+                <ListView>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <HorizontalStackLayout >
+                                    <Image Source="contact_image"/>
+                                    <Label Margin="10,0,0,0" TextColor="Black" Text="{Binding .}"/>
+                                </HorizontalStackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </tabView:SfTabItem>
+            <tabView:SfTabItem Header="CONTACTS">
+                <ListView>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <HorizontalStackLayout >
+                                    <Image Source="contact_image"/>
+                                    <Label Margin="10,0,0,0" TextColor="Black" Text="{Binding .}"/>
+                                </HorizontalStackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </tabView:SfTabItem>
+        </tabView:SfTabView>
+    </Grid>
+</ContentPage>
