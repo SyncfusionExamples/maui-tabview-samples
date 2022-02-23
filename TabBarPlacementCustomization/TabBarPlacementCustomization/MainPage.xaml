@@ -32,8 +32,7 @@
             </Style>
         </Grid.Resources>
         <tabView:SfTabView x:Name="TabView" TabBarPlacement="Bottom" IndicatorPlacement="Top">
-            <tabView:SfTabItem Header="CALLS" BadgeText="3">
-                <tabView:SfTabItem.BadgeSettings FontSize="15" FontAttributes="Bold" FontFamily="serif"/>
+            <tabView:SfTabItem Header="CALLS">
                 <ListView RowHeight="60">
                     <ListView.ItemTemplate>
                         <DataTemplate>
@@ -48,7 +47,6 @@
                 </ListView>
             </tabView:SfTabItem>
             <tabView:SfTabItem Header="MESSAGES">
-                <tabView:SfTabItem.BadgeSettings Icon="Dot"/>
                 <ListView>
                     <ListView.ItemTemplate>
                         <DataTemplate>
