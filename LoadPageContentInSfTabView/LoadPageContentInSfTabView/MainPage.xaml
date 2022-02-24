@@ -1,14 +1,37 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="LoadPageContentInSfTabView.MainPage"
-             xmlns:local="clr-namespace:LoadPageContentInSfTabView"
+             xmlns:control="clr-namespace:LoadPageContentInSfTabView.Control"
+             xmlns:page="clr-namespace:LoadPageContentInSfTabView.View"
              xmlns:tabView="clr-namespace:Syncfusion.Maui.TabView;assembly=Syncfusion.Maui.TabView"
              BackgroundColor="{DynamicResource SecondaryColor}">
 
-    <ContentPage.BindingContext>
-        <local:ViewModel />
-    </ContentPage.BindingContext>
-    
-    <tabView:SfTabView Items="{Binding Items}" />
-    
+    <tabView:SfTabView>
+        <tabView:SfTabView.Items>
+            <control:CustomTabItem Header="Page1">
+                <control:CustomTabItem.Page>
+                    <page:TabViewItemPage1 />
+                </control:CustomTabItem.Page>
+            </control:CustomTabItem>
+
+            <control:CustomTabItem Header="Page2">
+                <control:CustomTabItem.Page>
+                    <page:TabViewItemPage2 />
+                </control:CustomTabItem.Page>
+            </control:CustomTabItem>
+
+            <control:CustomTabItem Header="Page3">
+                <control:CustomTabItem.Page>
+                    <page:TabViewItemPage3 />
+                </control:CustomTabItem.Page>
+            </control:CustomTabItem>
+
+            <control:CustomTabItem Header="Page4">
+                <control:CustomTabItem.Page>
+                    <page:TabViewItemPage4 />
+                </control:CustomTabItem.Page>
+            </control:CustomTabItem>
+        </tabView:SfTabView.Items>
+    </tabView:SfTabView>
+
 </ContentPage>
