@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CreateNestedTabViews_MAUI.MainPage"
+             xmlns:tabView="clr-namespace:Syncfusion.Maui.TabView;assembly=Syncfusion.Maui.TabView"
+             xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
+             xmlns:slider="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
+             xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler"
+             xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar"
+             xmlns:local="clr-namespace:CreateNestedTabViews_MAUI">
+
+    <ContentPage.BindingContext>
+        <local:ViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+        <tabView:SfTabView x:Name="tabView"
+                           TabBarBackground="#FDF8F6"
+                           IndicatorBackground="#6200EE">
+            <tabView:SfTabView.Items>
+                <tabView:SfTabItem Header="Charts">
+                    <tabView:SfTabItem.Content>
+                        <tabView:SfTabView TabBarBackground="#A1A9D7"
+                                           TabBarPlacement="Bottom"
+                                           IndicatorBackground="Orange"
+                                           IndicatorPlacement="Fill">
+                            <tabView:SfTabView.Items>
+                                <tabView:SfTabItem Header="Column">
+                                    <tabView:SfTabItem.Content>
+                                        <chart:SfCartesianChart Title="Height Comparision">
+                                            <chart:SfCartesianChart.XAxes>
+                                                <chart:CategoryAxis>
+                                                    <chart:CategoryAxis.Title>
+                                                        <chart:ChartAxisTitle Text="Name" />
+                                                    </chart:CategoryAxis.Title>
+                                                </chart:CategoryAxis>
+                                            </chart:SfCartesianChart.XAxes>
+                                            <chart:SfCartesianChart.YAxes>
+                                                <chart:NumericalAxis>
+                                                    <chart:NumericalAxis.Title>
+                                                        <chart:ChartAxisTitle Text="Height" />
+                                                    </chart:NumericalAxis.Title>
+                                                </chart:NumericalAxis>
+                                            </chart:SfCartesianChart.YAxes>
+                                            <chart:ColumnSeries ItemsSource="{Binding Persons}"
+                                                                XBindingPath="Name"
+                                                                YBindingPath="Height"
+                                                                ShowDataLabels="True"/>
+                                        </chart:SfCartesianChart>
+                                    </tabView:SfTabItem.Content>
+                                </tabView:SfTabItem>
+
+                                <tabView:SfTabItem Header="Pie">
+                                    <tabView:SfTabItem.Content>
+                                        <chart:SfCircularChart Title="Product Sales">
+                                            <chart:SfCircularChart.Legend>
+                                                <chart:ChartLegend />
+                                            </chart:SfCircularChart.Legend>
+                                            <chart:PieSeries ItemsSource="{Binding Products}"
+                                                             XBindingPath="Name"
+                                                             YBindingPath="SalesRate"
+                                                             ShowDataLabels="True"/>
+                                        </chart:SfCircularChart>
+                                    </tabView:SfTabItem.Content>
+                                </tabView:SfTabItem>
+                            </tabView:SfTabView.Items>
+                        </tabView:SfTabView>
+                    </tabView:SfTabItem.Content>
+                </tabView:SfTabItem>
+
+                <tabView:SfTabItem Header="Sliders">
+                    <tabView:SfTabItem.Content>
+                        <tabView:SfTabView TabBarBackground="#A1A9D7"
+                                           TabBarPlacement="Bottom"
+                                           IndicatorBackground="Orange"
+                                           IndicatorPlacement="Fill">
+                            <tabView:SfTabView.Items>
+                                <tabView:SfTabItem Header="Slider">
+                                    <tabView:SfTabItem.Content>
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition />
+                                                <RowDefinition />
+                                            </Grid.RowDefinitions>
+                                            <slider:SfSlider Minimum="1" Maximum="10" Value="6"
+                                                             Interval="1" ShowLabels="True" ShowTicks="True"/>
+                                            <slider:SfSlider Grid.Row="1" Minimum="2" Maximum="20" Value="6"
+                                                             Interval="2" ShowLabels="True" ShowTicks="True" />
+                                        </Grid>
+                                    </tabView:SfTabItem.Content>
+                                </tabView:SfTabItem>
+
+                                <tabView:SfTabItem Header="Range Slider">
+                                    <tabView:SfTabItem.Content>
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition />
+                                                <RowDefinition />
+                                            </Grid.RowDefinitions>
+                                            <slider:SfRangeSlider Minimum="1" Maximum="10" RangeStart="4"
+                                                                  RangeEnd="8" Interval="2"
+                                                                  ShowLabels="True" ShowTicks="True"/>
+                                            <slider:SfRangeSlider Grid.Row="1" Minimum="2" Maximum="20"
+                                                                  RangeStart="4" RangeEnd="10" Interval="2"
+                                                                  ShowLabels="True" ShowTicks="True" />
+                                        </Grid>
+                                    </tabView:SfTabItem.Content>
+                                </tabView:SfTabItem>
+                            </tabView:SfTabView.Items>
+                        </tabView:SfTabView>
+                    </tabView:SfTabItem.Content>
+                </tabView:SfTabItem>
+                <tabView:SfTabItem Header="Calendars">
+                    <tabView:SfTabItem.Content>
+                        <tabView:SfTabView TabBarBackground="#A1A9D7"
+                                           TabBarPlacement="Bottom"
+                                           IndicatorBackground="Orange"
+                                           IndicatorPlacement="Fill">
+                            <tabView:SfTabView.Items>
+                                <tabView:SfTabItem Header="Scheduler">
+                                    <tabView:SfTabItem.Content>
+                                        <scheduler:SfScheduler AllowedViews="Week,Month,TimelineMonth"/>
+                                    </tabView:SfTabItem.Content>
+                                </tabView:SfTabItem>
+
+                                <tabView:SfTabItem Header="Calendar">
+                                    <tabView:SfTabItem.Content>
+                                        <calendar:SfCalendar />
+                                    </tabView:SfTabItem.Content>
+                                </tabView:SfTabItem>
+                            </tabView:SfTabView.Items>
+                        </tabView:SfTabView>
+                    </tabView:SfTabItem.Content>
+                </tabView:SfTabItem>
+            </tabView:SfTabView.Items>
+        </tabView:SfTabView>
+    </ContentPage.Content>
+
+</ContentPage>
