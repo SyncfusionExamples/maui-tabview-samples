@@ -1,18 +1,18 @@
 # Maui TabView Samples
 Contains samples for .NET MAUI Tab View.
-#   Getting Started with .NET MAUI Tab View (SfTabView)
+##   Getting Started with .NET MAUI Tab View (SfTabView)
 This section explains the steps required to configure the .NET MAUI Tab View control and customize its elements.
 
-##  Adding a .NET MAUI Tab View reference
+###  Adding a .NET MAUI Tab View reference
 Syncfusion .NET MAUI controls are available in Nuget.org. To add .NET MAUI Tab View to your project, open the NuGet package manager in Visual Studio, search for Syncfusion.Maui.TabView and then install it.
 
-#   Create a simple .NET MAUI Tab View
+##   Create a simple .NET MAUI Tab View
 This section explains how to create a .NET MAUI Tab View and configure it. The control can be configured entirely in C# code or by the XAML markup.
 
-##  Creating the project
+###  Creating the project
 Create a new .NET MAUI application in Visual Studio
 
-##  Adding a .NET MAUI Tab View control
+###  Adding a .NET MAUI Tab View control
 Step 1: Add the NuGet to the project as discussed in the above reference section.
 
 Step 2: Add the namespace as shown in the following code sample.
