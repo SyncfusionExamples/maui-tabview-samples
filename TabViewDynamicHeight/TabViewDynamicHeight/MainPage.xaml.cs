@@ -11,9 +11,9 @@ namespace TabViewDynamicHeight
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            tabsView.HeightRequest = GetContentHeight(call);
+            tabView.HeightRequest = GetContentHeight(call);
         }
-        private void tabsView_SelectionChanged(object sender, Syncfusion.Maui.TabView.TabSelectionChangedEventArgs e)
+        private void OnSelectionChanged(object sender, Syncfusion.Maui.TabView.TabSelectionChangedEventArgs e)
         {
             AdjustTabViewHeight(e.NewIndex);
         }
@@ -23,16 +23,16 @@ namespace TabViewDynamicHeight
             switch (selectedIndex)
             {
                 case 0: 
-                    tabsView.HeightRequest = GetContentHeight(call);
+                    tabView.HeightRequest = GetContentHeight(call);
                     break;
                 case 1: 
-                    tabsView.HeightRequest = GetContentHeight(contacts);
+                    tabView.HeightRequest = GetContentHeight(contacts);
                     break;
                 case 2: 
-                    tabsView.HeightRequest = GetContentHeight(favourite);
+                    tabView.HeightRequest = GetContentHeight(favourite);
                     break;
                 default:
-                    tabsView.HeightRequest = 100; // Set a minimum height
+                    tabView.HeightRequest = 100; // Set a minimum height
                     break;
             }
         }

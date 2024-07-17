@@ -5,9 +5,9 @@
              xmlns:tabView="clr-namespace:Syncfusion.Maui.TabView;assembly=Syncfusion.Maui.TabView">
 
     <Grid VerticalOptions="Start">
-        <tabView:SfTabView x:Name="tabsView" TabBarBackground="HotPink"
+        <tabView:SfTabView x:Name="tabView" TabBarBackground="HotPink"
                            BackgroundColor="LightBlue"
-                           SelectionChanged="tabsView_SelectionChanged">
+                           SelectionChanged="OnSelectionChanged">
 
             <tabView:SfTabItem Header="Call" x:Name="call">
                 <tabView:SfTabItem.Content>
