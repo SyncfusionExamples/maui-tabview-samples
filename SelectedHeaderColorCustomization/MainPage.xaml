@@ -30,6 +30,26 @@
                                     <Setter Property="TextColor" Value="White" />
                                 </VisualState.Setters>
                             </VisualState>
+                            <VisualState x:Name="Pressed">
+                                <VisualState.Setters>
+                                    <Setter Property="TextColor" Value="Red" />
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState x:Name="PressedFilled">
+                                <VisualState.Setters>
+                                    <Setter Property="TextColor" Value="Red" />
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState x:Name="InActivePressed">
+                                <VisualState.Setters>
+                                    <Setter Property="TextColor" Value="Yellow" />
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState x:Name="InActivePressedFilled">
+                                <VisualState.Setters>
+                                    <Setter Property="TextColor" Value="Yellow" />
+                                </VisualState.Setters>
+                            </VisualState>
                         </VisualStateGroup>
                     </VisualStateGroupList>
                 </Setter>
