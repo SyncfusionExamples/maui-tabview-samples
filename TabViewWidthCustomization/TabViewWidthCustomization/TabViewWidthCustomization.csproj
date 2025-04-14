@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>net6.0-ios;net6.0-android;net6.0-maccatalyst</TargetFrameworks>
+		<TargetFrameworks>net9.0-ios;net9.0-android;net9.0-maccatalyst</TargetFrameworks>
 		<!-- <TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows')) and '$(MSBuildRuntimeType)' == 'Full'">$(TargetFrameworks);net6.0-windows10.0.19041</TargetFrameworks> -->
 		<OutputType>Exe</OutputType>
 		<RootNamespace>TabViewWidthCustomization</RootNamespace>
@@ -16,7 +16,7 @@
 		<ApplicationId>com.companyname.TabViewWidthCustomization</ApplicationId>
 
 		<!-- Versions -->
-		<ApplicationVersion>1.0</ApplicationVersion>
+		<ApplicationVersion>1</ApplicationVersion>
 		<AndroidVersionCode>1</AndroidVersionCode>
 
 		<!-- Required for C# Hot Reload -->
@@ -46,7 +46,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="Syncfusion.Maui.TabView" Version="19.3.0.43-preview" />
+	  <PackageReference Include="Syncfusion.Maui.TabView" Version="*" />
 	</ItemGroup>
 
 	<PropertyGroup Condition="$(TargetFramework.Contains('-windows'))">

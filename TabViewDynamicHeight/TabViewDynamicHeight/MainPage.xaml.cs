@@ -44,7 +44,7 @@ namespace TabViewDynamicHeight
                 return 100; // Set a minimum height when there is no content
             }
 
-            return tabItem.Content.Measure(double.PositiveInfinity, double.PositiveInfinity).Request.Height;
+            return tabItem.Content.Measure(double.PositiveInfinity, double.PositiveInfinity).Height;
         }
     }
 }
