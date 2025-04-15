@@ -48,20 +48,8 @@
 
 	<ItemGroup Condition="$(TargetFramework.Contains('-windows'))">
 		<!-- Required - WinUI does not yet have buildTransitive for everything -->
-		<PackageReference Include="Microsoft.WindowsAppSDK" Version="1.6.240923002" />
-		<PackageReference Include="Microsoft.Graphics.Win2D" Version="1.2.0" />
-	</ItemGroup>
-
-	<ItemGroup Condition="'$(TargetFramework)' == 'net9.0-ios'">
-	  <PackageReference Include="Syncfusion.Maui.TabView">
-	    <Version>*</Version>
-	  </PackageReference>
-	</ItemGroup>
-
-	<ItemGroup Condition="'$(TargetFramework)' == 'net9.0-maccatalyst'">
-	  <PackageReference Include="Syncfusion.Maui.TabView">
-	    <Version>*</Version>
-	  </PackageReference>
+		<PackageReference Include="Microsoft.WindowsAppSDK" Version="*" />
+		<PackageReference Include="Microsoft.Graphics.Win2D" Version="*" />
 	</ItemGroup>
 
 	<ItemGroup>
