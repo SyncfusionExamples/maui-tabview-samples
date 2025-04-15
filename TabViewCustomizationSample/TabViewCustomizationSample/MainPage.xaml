@@ -2,6 +2,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TabViewCustomizationSample.MainPage"
              xmlns:tabView="clr-namespace:Syncfusion.Maui.TabView;assembly=Syncfusion.Maui.TabView"
+             xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
              BackgroundColor="{DynamicResource SecondaryColor}">
     <Grid >
         <Grid.Resources>
@@ -55,7 +56,8 @@
         </Grid.Resources>
         <tabView:SfTabView x:Name="TabView" TabBarHeight="72">
            <tabView:SfTabItem Header="Document" ImageSource="document" BadgeText="3">
-                <tabView:SfTabItem.BadgeSettings FontSize="15" FontAttributes="Bold" FontFamily="serif">
+                <tabView:SfTabItem.BadgeSettings >
+                    <core:BadgeSettings FontSize="15" FontAttributes="Bold" FontFamily="serif"></core:BadgeSettings>
                 </tabView:SfTabItem.BadgeSettings>
                 <ListView>
                     <ListView.ItemTemplate>
@@ -71,8 +73,9 @@
                 </ListView>
             </tabView:SfTabItem>
               <tabView:SfTabItem Header="Excel" ImageSource="excel" BadgeText="2" >
-                    <tabView:SfTabItem.BadgeSettings FontSize="15" FontAttributes="Bold" FontFamily="serif">
-                    </tabView:SfTabItem.BadgeSettings>
+                <tabView:SfTabItem.BadgeSettings >
+                    <core:BadgeSettings FontSize="15" FontAttributes="Bold" FontFamily="serif"></core:BadgeSettings>
+                </tabView:SfTabItem.BadgeSettings>
                 <ListView>
                     <ListView.ItemTemplate>
                         <DataTemplate>

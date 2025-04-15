@@ -6,7 +6,7 @@
 
     <ContentPage.Content>
         <tabView:SfTabView>
-            <tabView:SfTabItem Header="Alexandar" ImageSource="alexandar" TabImagePosition="Left">
+            <tabView:SfTabItem Header="Alexandar" ImageSource="alexandar" ImagePosition="Left">
                 <tabView:SfTabItem.Content>
                     <ListView RowHeight="50">
                         <ListView.ItemsSource>
@@ -34,7 +34,7 @@
                     </ListView>
                 </tabView:SfTabItem.Content>
             </tabView:SfTabItem>
-            <tabView:SfTabItem Header="Gabriella" ImageSource="gabriella" TabImagePosition="Left">
+            <tabView:SfTabItem Header="Gabriella" ImageSource="gabriella" ImagePosition="Left">
                 <tabView:SfTabItem.Content>
                     <ListView RowHeight="50">
                         <ListView.ItemsSource>
@@ -62,7 +62,7 @@
                     </ListView>
                 </tabView:SfTabItem.Content>
             </tabView:SfTabItem>
-            <tabView:SfTabItem Header="Clara" ImageSource="clara" TabImagePosition="Left">
+            <tabView:SfTabItem Header="Clara" ImageSource="clara" ImagePosition="Left">
                 <tabView:SfTabItem.Content>
                     <ListView RowHeight="50">
                         <ListView.ItemsSource>
